@@ -1,0 +1,9 @@
+﻿@model EDeviceClaims.WebUi.Models.DeviceListViewModel
+
+
+<ul>
+  @foreach (var thing in Model)
+  {
+    <li>@thing.Name -> @thing.SerialNumber</li>
+  }
+</ul>
