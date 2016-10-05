@@ -1,9 +1,20 @@
 ﻿@model EDeviceClaims.WebUi.Models.DeviceListViewModel
-
-
-<ul>
-  @foreach (var thing in Model)
-  {
-    <li>hi @thing.Name -> @thing.SerialNumber</li>
-  }
-</ul>
+@{
+    ViewBag.Title = "Device";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>Devices covered by your policy.</h3>
+<hr />
+<table>
+    <tr>
+        <td style="width:200px; color:#616fe0"><strong>Device</strong></td>
+        <td style="width:200px; color:#616fe0"><strong>Serial Number</strong></td>
+    </tr>
+    @foreach (var thing in Model)
+    {
+        <tr>
+            <td style="width:200px">&#8226;&nbsp;@thing.Name</td>
+            <td style="width:200px">@thing.SerialNumber</td>
+        </tr>
+    }
+</table>

@@ -57,9 +57,28 @@ namespace EDeviceClaims.Repositories.Migrations
         CustomerEmail = "user@personal.com",
         UserId = policyHolder.Id
       };
+            var p3 = new Policy
+            {
+                Id = Guid.NewGuid(),
+                Number = "99999",
+                SerialNumber = "RF3C6000MNA",
+                DeviceName = "iPad Pro",
+                CustomerEmail = "user@personal.com",
+                UserId = policyHolder.Id
+            };
+            var p4 = new Policy
+            {
+                Id = Guid.NewGuid(),
+                Number = "88888",
+                SerialNumber = "SN483-AB-448N7",
+                DeviceName = "Samsung Galaxy Note7",
+                CustomerEmail = "user@personal.com",
+                UserId = policyHolder.Id
+            };
 
 
-      context.Policies.AddOrUpdate(
+
+            context.Policies.AddOrUpdate(
               p => p.Number,
               p1,
               p2,
@@ -72,12 +91,14 @@ namespace EDeviceClaims.Repositories.Migrations
               new Policy { Id = Guid.NewGuid(), Number = "26272", SerialNumber = "QRSTU", DeviceName = "iPhone 6+", CustomerEmail = "j@b.com" }
             );
 
-      //policyHolder.UserPolicies.Add(p1);
-      //policyHolder.UserPolicies.Add(p2);
-      //context.SaveChanges();
-    }
+            //policyHolder.UserPolicies.Add(p1);
+            //policyHolder.UserPolicies.Add(p2);
+            //policyHolder.UserPolicies.Add(p3);
+            //policyHolder.UserPolicies.Add(p4);
+            //context.SaveChanges();
+        }
 
-    public AuthorizedUser CreateUser(string userName, string email, EDeviceClaimsContext context)
+        public AuthorizedUser CreateUser(string userName, string email, EDeviceClaimsContext context)
     {
       var userStore = new UserStore<AuthorizedUser>(context);
       var userManager = new UserManager<AuthorizedUser>(userStore);
