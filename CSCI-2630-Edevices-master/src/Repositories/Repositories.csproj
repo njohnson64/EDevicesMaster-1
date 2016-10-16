@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaimsRepository.cs" />
     <Compile Include="EDeviceClaimsUnitOfWork.cs" />
     <Compile Include="Migrations\201509041738522_updatedPolicyFieldLengths.cs" />
     <Compile Include="Migrations\201509041738522_updatedPolicyFieldLengths.Designer.cs">

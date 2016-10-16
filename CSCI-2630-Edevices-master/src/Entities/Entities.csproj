@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthorizedUser.cs" />
+    <Compile Include="ClaimEntity.cs" />
     <Compile Include="EntityBase.cs" />
     <Compile Include="PolicyEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
