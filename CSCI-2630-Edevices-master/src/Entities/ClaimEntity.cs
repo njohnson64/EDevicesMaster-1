@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EDeviceClaims.Entities
-{
-    public class ClaimEntity : EntityBase<Guid>
-    {
-    }
+﻿
+ using System;
+ using System.ComponentModel.DataAnnotations.Schema;
+ 
+ namespace EDeviceClaims.Entities
+ {
+   [Table("claims", Schema = "app")]
+   public class ClaimEntity : EntityBase<Guid>
+   {
+    public Guid PolicyId { get; set; }
+     public virtual PolicyEntity Policy { get; set; }
+   }
+ }
 }
+
