@@ -10,7 +10,7 @@ namespace EDeviceClaims.Domain.Models
   public class PolicyDomainModel
   {
 
-    public PolicyDomainModel(Policy policyEntity)
+    public PolicyDomainModel(PolicyEntity policyEntity)
     {
       Id = policyEntity.Id;
       Number = policyEntity.Number;
