@@ -22,9 +22,9 @@ namespace EDeviceClaims.Domain.Integration.Tests.ServicesTests.PolicyServiceTest
         _user = CreateUser("policyholder@company.com", "policyholder@company.com", db);
         db.SaveChanges();
 
-        db.Policies.Add(new Policy { Id = Guid.NewGuid(), Number = "11121", SerialNumber = "MNOPQ", DeviceName = "iPhone 6+", CustomerEmail = "d@b.com", UserId = _user.Id});
-        db.Policies.Add(new Policy { Id = Guid.NewGuid(), Number = "11122", SerialNumber = "ABCDE", DeviceName = "iPhone 6+", CustomerEmail = "d@b.com", UserId = _user.Id });
-        db.Policies.Add(new Policy { Id = Guid.NewGuid(), Number = "11123", SerialNumber = "EDCBA", DeviceName = "iPhone 6+", CustomerEmail = "d@b.com" });
+        db.Policies.Add(new PolicyEntity { Id = Guid.NewGuid(), Number = "11121", SerialNumber = "MNOPQ", DeviceName = "iPhone 6+", CustomerEmail = "d@b.com", UserId = _user.Id});
+        db.Policies.Add(new PolicyEntity { Id = Guid.NewGuid(), Number = "11122", SerialNumber = "ABCDE", DeviceName = "iPhone 6+", CustomerEmail = "d@b.com", UserId = _user.Id });
+        db.Policies.Add(new Policyentity { Id = Guid.NewGuid(), Number = "11123", SerialNumber = "EDCBA", DeviceName = "iPhone 6+", CustomerEmail = "d@b.com" });
 
         db.SaveChanges();
       }

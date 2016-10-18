@@ -7,7 +7,7 @@ namespace EDeviceClaims.Repositories.Contexts
 {
   public class EDeviceClaimsContext : IdentityDbContext<AuthorizedUser>
   {
-    public DbSet<Policy> Policies { get; set; }
+    public DbSet<PolicyEntity> Policies { get; set; }
     public DbSet<ClaimEntity> Claims { get; set; }
 
     public EDeviceClaimsContext(string cn) : base(cn)

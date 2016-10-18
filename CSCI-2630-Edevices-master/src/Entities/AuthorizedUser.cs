@@ -17,6 +17,6 @@ namespace EDeviceClaims.Entities
       return userIdentity;
     }
 
-    public virtual ICollection<Policy> UserPolicies { get; set; }
+    public virtual ICollection<PolicyEntity> UserPolicies { get; set; }
   }
 }

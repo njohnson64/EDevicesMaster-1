@@ -39,7 +39,7 @@ namespace EDeviceClaims.Repositories.Migrations
       CreateUser("admin@company.com", "admin@company.com", context);
       CreateUser("callcenter@company.com", "callcenter@company.com", context);
 
-      var p1 = new Policy
+      var p1 = new PolicyEntity
       {
         Id = Guid.NewGuid(),
         Number = "12345",
@@ -48,7 +48,7 @@ namespace EDeviceClaims.Repositories.Migrations
         CustomerEmail = "user@personal.com",
         UserId = policyHolder.Id
       };
-      var p2 = new Policy
+      var p2 = new PolicyEntity
       {
         Id = Guid.NewGuid(),
         Number = "67890",
@@ -57,7 +57,7 @@ namespace EDeviceClaims.Repositories.Migrations
         CustomerEmail = "user@personal.com",
         UserId = policyHolder.Id
       };
-            var p3 = new Policy
+            var p3 = new PolicyEntity
             {
                 Id = Guid.NewGuid(),
                 Number = "99999",
@@ -66,7 +66,7 @@ namespace EDeviceClaims.Repositories.Migrations
                 CustomerEmail = "user@personal.com",
                 UserId = policyHolder.Id
             };
-            var p4 = new Policy
+            var p4 = new PolicyEntity
             {
                 Id = Guid.NewGuid(),
                 Number = "88888",
@@ -82,13 +82,13 @@ namespace EDeviceClaims.Repositories.Migrations
               p => p.Number,
               p1,
               p2,
-              new Policy { Id = Guid.NewGuid(), Number = "11121", SerialNumber = "MNOPQ", DeviceName = "iPhone 6+", CustomerEmail = "d@b.com" },
-              new Policy { Id = Guid.NewGuid(), Number = "31415", SerialNumber = "RSTUV", DeviceName = "iPhone 6+", CustomerEmail = "e@b.com" },
-              new Policy { Id = Guid.NewGuid(), Number = "16171", SerialNumber = "WXYZA", DeviceName = "iPhone 6+", CustomerEmail = "f@b.com" },
-              new Policy { Id = Guid.NewGuid(), Number = "81920", SerialNumber = "BCDEF", DeviceName = "iPhone 6+", CustomerEmail = "g@b.com" },
-              new Policy { Id = Guid.NewGuid(), Number = "21222", SerialNumber = "GHIJK", DeviceName = "iPhone 6+", CustomerEmail = "h@b.com" },
-              new Policy { Id = Guid.NewGuid(), Number = "32425", SerialNumber = "LMNOP", DeviceName = "iPhone 6+", CustomerEmail = "i@b.com" },
-              new Policy { Id = Guid.NewGuid(), Number = "26272", SerialNumber = "QRSTU", DeviceName = "iPhone 6+", CustomerEmail = "j@b.com" }
+              new PolicyEntity { Id = Guid.NewGuid(), Number = "11121", SerialNumber = "MNOPQ", DeviceName = "iPhone 6+", CustomerEmail = "d@b.com" },
+              new PolicyEntity { Id = Guid.NewGuid(), Number = "31415", SerialNumber = "RSTUV", DeviceName = "iPhone 6+", CustomerEmail = "e@b.com" },
+              new PolicyEntity { Id = Guid.NewGuid(), Number = "16171", SerialNumber = "WXYZA", DeviceName = "iPhone 6+", CustomerEmail = "f@b.com" },
+              new PolicyEntity { Id = Guid.NewGuid(), Number = "81920", SerialNumber = "BCDEF", DeviceName = "iPhone 6+", CustomerEmail = "g@b.com" },
+              new PolicyEntity { Id = Guid.NewGuid(), Number = "21222", SerialNumber = "GHIJK", DeviceName = "iPhone 6+", CustomerEmail = "h@b.com" },
+              new PolicyEntity { Id = Guid.NewGuid(), Number = "32425", SerialNumber = "LMNOP", DeviceName = "iPhone 6+", CustomerEmail = "i@b.com" },
+              new PolicyEntity { Id = Guid.NewGuid(), Number = "26272", SerialNumber = "QRSTU", DeviceName = "iPhone 6+", CustomerEmail = "j@b.com" }
             );
 
             //policyHolder.UserPolicies.Add(p1);

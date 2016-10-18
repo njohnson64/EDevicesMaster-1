@@ -9,10 +9,10 @@ namespace EDeviceClaims.Interactors
 {
   public interface IGetPolicyInteractor
   {
-    Policy GetById(Guid id);
-    Policy GetByNumber(string number);
-    ICollection<Policy> GetByCustomerEmailAdress(string email);
-    ICollection<Policy> GetByUserId(string userId);
+    PolicyEntity GetById(Guid id);
+    PolicyEntity GetByNumber(string number);
+    ICollection<PolicyEntity> GetByCustomerEmailAdress(string email);
+    ICollection<PolicyEntity> GetByUserId(string userId);
   }
 
   public class GetPolicyInteractor : IGetPolicyInteractor
@@ -33,22 +33,22 @@ namespace EDeviceClaims.Interactors
       _repo = policyRepo;
     }
 
-    public Policy GetById(Guid id)
+    public PolicyEntity GetById(Guid id)
     {
       return Repo.GetById(id);
     }
 
-    public Policy GetByNumber(string number)
+    public PolicyEntity GetByNumber(string number)
     {
       return Repo.GetByPolicyNumber(number);
     }
 
-    public ICollection<Policy> GetByCustomerEmailAdress(string email)
+    public ICollection<PolicyEntity> GetByCustomerEmailAdress(string email)
     {
       throw new NotImplementedException();
     }
 
-    public ICollection<Policy> GetByUserId(string userId)
+    public ICollection<PolicyEntity> GetByUserId(string userId)
     {
       return Repo.GetByUserId(userId);
     }
