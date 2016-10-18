@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using EDeviceClaims.Entities;
 
 namespace EDeviceClaims.Repositories
@@ -27,7 +28,7 @@ namespace EDeviceClaims.Repositories
 
     public ICollection<Policy> GetByUserId(string userId)
     {
-      return ObjectSet.Where(p => p.UserId == userId).ToList();
-    }
+         return ObjectSet.Where(p => p.UserId == userId).Include(c => c.Claims).ToList();
+        }
   }
 }
